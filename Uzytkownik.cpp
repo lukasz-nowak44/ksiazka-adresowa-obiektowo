@@ -2,7 +2,7 @@
 
 void Uzytkownik::ustawID(int noweID)
 {
-    if(id >= 0)
+    if(noweID >= 0)
         id = noweID;
 }
 void Uzytkownik::ustawLogin(string nowyLogin)
