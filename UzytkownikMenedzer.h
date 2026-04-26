@@ -29,6 +29,7 @@ public:
     void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();     //getter do idZalogowanegoUzytkownika z funkcji logowanie uzytkownika
+    void zmianaHaslaZalogowanegoUzytkownika();
 
 };
 #endif

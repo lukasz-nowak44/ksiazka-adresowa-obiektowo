@@ -116,3 +116,22 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return this-> idZalogowanegoUzytkownika;
 }
+
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
+{
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    cin >> noweHaslo;
+
+    for (size_t i=0; i < uzytkownicy.size(); i++)
+    {
+        if (uzytkownicy[i].pobierzId() == idZalogowanegoUzytkownika)
+        {
+            uzytkownicy[i].ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione. Nowe: " << uzytkownicy[i].pobierzHaslo() << endl;
+            system("pause");
+        }
+    }
+    plikZUzytownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+
+}
