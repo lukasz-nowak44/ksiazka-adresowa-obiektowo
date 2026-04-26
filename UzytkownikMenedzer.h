@@ -27,7 +27,8 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
-
+    int logowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();     //getter do idZalogowanegoUzytkownika z funkcji logowanie uzytkownika
 
 };
 #endif

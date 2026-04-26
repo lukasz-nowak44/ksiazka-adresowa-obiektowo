@@ -10,5 +10,10 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
 
+int KsiazkaAdresowa::logowanieUzytkownika()
+{
+    uzytkownikMenedzer.logowanieUzytkownika();
+    cout << "Zalogowany uzytkownik: " << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() << endl;
+}
 
 
