@@ -32,6 +32,9 @@ public:
     void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
     int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
+    void wyswietlWszystkichAdresatow();
+    void wyswietlDaneAdresata(Adresat adresat);
+    void oproznijVector();
 
 };
 
