@@ -104,3 +104,5 @@ void AdresatMenedzer::oproznijVector()
     adresaci.clear();
 }
 
+
+
