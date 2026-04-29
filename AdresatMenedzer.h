@@ -21,19 +21,19 @@ class AdresatMenedzer
     int idUsunietegoAdresata;
     int idZalogowanegoUzytkownika;
 
+    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
+    void wyswietlDaneAdresata(Adresat adresat);
 
     PlikZAdresatami plikZAdresatami;
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};
     int dodajAdresata();
-    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata);
     int pobierzIdZalogowanegoUzytkownika();
     void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
     int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata);
     void wyswietlWszystkichAdresatow();
-    void wyswietlDaneAdresata(Adresat adresat);
     void oproznijVector();
 
 };
