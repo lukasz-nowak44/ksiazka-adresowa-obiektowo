@@ -20,17 +20,21 @@ class UzytkownikMenedzer
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
+
+
     PlikZUzytkownikami plikZUzytownikami;
 
 public:
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytownikami(nazwaPlikuZUzytkownikami){};
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytownikami(nazwaPlikuZUzytkownikami){
+        uzytkownicy = plikZUzytownikami.wczytajUzytkownikowZPliku();
+    };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();     //getter do idZalogowanegoUzytkownika z funkcji logowanie uzytkownika
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
+    bool czyUzytkownikJestZalogowany();
 
 };
 #endif

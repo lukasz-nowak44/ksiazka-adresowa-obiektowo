@@ -8,3 +8,7 @@
 8|2|Anna|Wa|asdg|sadgf|asgd|
 9|4|dobald|trump|agsa|adfsas|asfdas|
 10|4|kamal|asfd|sadfsa|asfd|saf|
+11|1|anna|walesa|wqad|waefawe|waefaw|
+12|1|lukasz|walesa|wergaerg|aegraeg|aegra|
+13|2|sylwia|sz|aerge|erga|raegae|
+14|2|Mateusz|P|qarga|aerga|aerga|
