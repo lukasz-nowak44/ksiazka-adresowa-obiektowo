@@ -1,4 +1,5 @@
 1|joanna|324|
 2|beata|444|
 3|anna|333|
-4|hanna|777|
+4|hanna|666|
+5|lukasz|degustator|
