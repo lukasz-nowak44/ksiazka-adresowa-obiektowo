@@ -16,3 +16,7 @@
 16|4|anna|walesa|arhs|serg|reag|
 17|4|lukasz|nowak|dtjrf|rthsr|eshtse|
 18|4|mariusz|mikler|erge|srg|serdg|
+19|3|Mariusz|Mikler|aerg|aergeg|awefwa|
+20|3|Lukasz|Nowak|awef|waefwa|fwaefwa|
+21|3|Lukasz|Walesa|awefaw|awefwaf|waefwa|
+22|3|Joanna|Skokowska|awefwaf|waefwaf|fawefwaf|

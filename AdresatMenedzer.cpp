@@ -44,27 +44,29 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, 
 
     cout << "Podaj imie: ";
     string imie;
-    cin >> imie;
+    imie = MetodyPomocnicze::wczytajLinie();
+    imie = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imie);
     adresat.ustawImie(imie);
 
     cout << "Podaj nazwisko: ";
     string nazwisko;
-    cin >> nazwisko;
+    nazwisko = MetodyPomocnicze::wczytajLinie();
+    nazwisko = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwisko);
     adresat.ustawNazwisko(nazwisko);
 
     cout << "Podaj numer telefonu: ";
     string nrTelefonu;
-    cin >> nrTelefonu;
+    nrTelefonu = MetodyPomocnicze::wczytajLinie();
     adresat.ustawNumerTelefonu(nrTelefonu);
 
     cout << "Podaj email: ";
     string email;
-    cin >> email;
+    email = MetodyPomocnicze::wczytajLinie();
     adresat.ustawEmail(email);
 
     cout << "Podaj adres: ";
     string adres;
-    cin >> adres;
+    adres = MetodyPomocnicze::wczytajLinie();
     adresat.ustawAdres(adres);
 
     return adresat;

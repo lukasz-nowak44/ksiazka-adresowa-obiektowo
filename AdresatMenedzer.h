@@ -11,6 +11,7 @@
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
 #include "UzytkownikMenedzer.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
