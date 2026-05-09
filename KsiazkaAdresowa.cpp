@@ -40,13 +40,23 @@ void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowanieUzytkownika();
     //adresatMenedzer.oproznijVector();
+    delete adresatMenedzer;
+    adresatMenedzer = NULL;
+
     cout << "Zalogowany uzytkownik: " << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() << endl;
 }
 
 int KsiazkaAdresowa::dodajAdresata()
 {
-    adresatMenedzer -> dodajAdresata();
-    cout << "Zalogowany uzytkownik: " << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() << endl;
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenedzer -> dodajAdresata();
+        cout << "Zalogowany uzytkownik: " << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika() << endl;
+    }
+    else
+    {
+        cout << "Aby dodac uzytkownika, nalezy najpierw sie zalogowac" << endl;
+    }
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()

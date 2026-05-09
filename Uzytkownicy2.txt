@@ -3,3 +3,4 @@
 3|anna|333|
 4|hanna|666|
 5|lukasz|degustator|
+6|mariusz|genelka|

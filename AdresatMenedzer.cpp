@@ -2,24 +2,18 @@
 
 int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
-    return idZalogowanegoUzytkownika;
+    return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
-void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
+/*void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
 {
     if(noweIdZalogowanegoUzytkownika >= 0)
-        idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
-}
-
-void AdresatMenedzer::ustawIdOstatniegoAdresata(int noweIdOstatniegoAdresata)
-{
-    if(noweIdOstatniegoAdresata >= 0)
-        idOstatniegoAdresata = noweIdOstatniegoAdresata;
-}
+        ID_ZALOGOWANEGO_UZYTKOWNIKA = noweIdZalogowanegoUzytkownika;
+}*/
 
 int AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
-    idOstatniegoAdresata = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 }
 
 int AdresatMenedzer::dodajAdresata()
@@ -27,20 +21,19 @@ int AdresatMenedzer::dodajAdresata()
     Adresat adresat;
 
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
-    adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika, idOstatniegoAdresata);
+    adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
-    return ++idOstatniegoAdresata;
 }
 
-Adresat AdresatMenedzer::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika, int idOstatniegoAdresata)
+Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawID(++idOstatniegoAdresata);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawID(plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     string imie;
