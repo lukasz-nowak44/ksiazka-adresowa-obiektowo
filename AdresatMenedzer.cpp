@@ -218,55 +218,74 @@ void AdresatMenedzer::edytujAdresata()
     system("pause");
 }
 
-
-
-/*void zaktualizujDaneWybranegoAdresata(Adresat adresat)
+void AdresatMenedzer::wyszukajAdresatowPoImieniu()
 {
-    int numerLiniiEdytowanegoAdresata = 0;
-    string liniaZDanymiAdresata = "";
+    string imiePoszukiwanegoAdresata = "";
+    int iloscAdresatow = 0;
 
-    numerLiniiEdytowanegoAdresata = zwrocNumerLiniiSzukanegoAdresata(idEdytowanegoAdresata);
-    liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
-    edytujWybranaLinieWPliku(numerLiniiEdytowanegoAdresata, liniaZDanymiAdresata);
-
-    cout << endl << "Dane zostaly zaktualizowane." << endl << endl;
-}
-*/
-
-
-/*void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami)
-{
-    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
-    string wczytanaLinia = "";
-    int numerWczytanejLinii = 1;
-
-    odczytywanyPlikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
-    tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
-
-    if (odczytywanyPlikTekstowy.good() == true)
+    system("cls");
+    if (!adresaci.empty())
     {
-        while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
-        {
-            if (numerWczytanejLinii == numerEdytowanejLinii)
-            {
-                if (numerWczytanejLinii == 1)
-                    tymczasowyPlikTekstowy << liniaZDanymiAdresataOddzielonePionowymiKreskami;
-                else if (numerWczytanejLinii > 1)
-                    tymczasowyPlikTekstowy << endl << liniaZDanymiAdresataOddzielonePionowymiKreskami;
-            }
-            else
-            {
-                if (numerWczytanejLinii == 1)
-                    tymczasowyPlikTekstowy << wczytanaLinia;
-                else if (numerWczytanejLinii > 1)
-                    tymczasowyPlikTekstowy << endl << wczytanaLinia;
-            }
-            numerWczytanejLinii++;
-        }
-        odczytywanyPlikTekstowy.close();
-        tymczasowyPlikTekstowy.close();
+        cout << ">>> WYSZUKIWANIE ADRESATOW O IMIENIU <<<" << endl << endl;
 
-        usunPlik(nazwaPlikuZAdresatami);
-        zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, nazwaPlikuZAdresatami);
+        cout << "Wyszukaj adresatow o imieniu: ";
+        imiePoszukiwanegoAdresata = MetodyPomocnicze::wczytajLinie();
+        imiePoszukiwanegoAdresata = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
+
+        for (vector <Adresat>::iterator  itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            if (itr -> pobierzImie() == imiePoszukiwanegoAdresata)
+            {
+                wyswietlDaneAdresata(*itr);
+                iloscAdresatow++;
+            }
+        }
+        wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
     }
-}*/
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
+    }
+    cout << endl;
+    system("pause");
+}
+
+void AdresatMenedzer::wyszukajAdresatowPoNazwisku()
+{
+    string nazwiskoPoszukiwanegoAdresata = "";
+    int iloscAdresatow = 0;
+
+    system("cls");
+    if (!adresaci.empty())
+    {
+        cout << ">>> WYSZUKIWANIE ADRESATOW O NAZWISKU <<<" << endl << endl;
+
+        cout << "Wyszukaj adresatow o nazwisku: ";
+        nazwiskoPoszukiwanegoAdresata = MetodyPomocnicze::wczytajLinie();
+        nazwiskoPoszukiwanegoAdresata = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwiskoPoszukiwanegoAdresata);
+
+        for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            if (itr -> pobierzNazwisko() == nazwiskoPoszukiwanegoAdresata)
+            {
+                wyswietlDaneAdresata(*itr);
+                iloscAdresatow++;
+            }
+        }
+         wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    cout << endl;
+    system("pause");
+}
+
+void AdresatMenedzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow)
+{
+    if (iloscAdresatow == 0)
+        cout << endl << "W ksiazce adresowej nie ma adresatow z tymi danymi." << endl;
+    else
+        cout << endl << "Ilosc adresatow w ksiazce adresowej wynosi: " << iloscAdresatow << endl << endl;
+}

@@ -24,6 +24,7 @@ class AdresatMenedzer
 
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
     PlikZAdresatami plikZAdresatami;
 
@@ -43,6 +44,8 @@ public:
     int usunAdresata();
     int podajIdWybranegoAdresata();
     void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 
 };
 
