@@ -6,4 +6,6 @@
 6|2|Justyna|Cyga|qwf|qwf|qwfe|
 7|1|Robert|Lewandowski|645 4684 46|asdf|sadf|
 8|1|Mariusz|Dorszyk|saf|sadf|sadf|
-9|1|Przemek|Lewandowski|qwf|qwf|qwfe|
+10|1|Anna|Walesa|aertgraeg|aegrearg|aergaeg|
+11|4|Donald|Trump|3213|awdaw|waszyngton white house|
+12|9|Krzysztof|Rochlinski|15|53213|123132|
