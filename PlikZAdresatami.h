@@ -20,12 +20,16 @@ class PlikZAdresatami:public PlikTekstowy
     //const string NAZWA_PLIKU_Z_ADRESATAMI;
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
+    int idUsuwanegoAdresata;
 
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
+    int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata();
+    int pobierzZPlikuIdOstatniegoAdresata();
+
 
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaPlikuTymczasowegoZAdresatami = "AdresaciTymczasowy.txt")
@@ -39,6 +43,8 @@ public:
     int pobierzIdOstatniegoAdresata();
     void usunWybranegoAdresataZPliku (int idUsuwanegoAdresata);
     void zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat);
+    int ustawIdOstatniegoAdresata();
+
 
 
 
