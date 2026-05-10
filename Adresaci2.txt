@@ -1,7 +1,6 @@
-
 1|2|robert|cyga|25|fasf|eaef|
-2|4|nicole|32q|sdfas|wfae|sf|
-3|1|krychu|fdsa|2134|asfd|sdf|
-4|1|kama|asfd|sadfa|asdf|sadf|
+2|4|nicole|32q|sdfas|nicole@tlen.pl|sf|
+3|1|krychu|fdsa|2134|asfd|os. kwiatowe 4, poznan|
+4|1|kama|asfd|645 4684 46|asdf|sadf|
 5|1|mariusz|mikler|saf|sadf|sadf|
 6|1|Justyna|koqw|qwf|qwf|qwfe|

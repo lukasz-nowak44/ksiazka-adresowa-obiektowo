@@ -37,6 +37,7 @@ public:
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdOstatniegoAdresata();
     void usunWybranegoAdresataZPliku (int idUsuwanegoAdresata);
+    void zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat);
 
 
 

@@ -6,7 +6,7 @@ using namespace std;
 
 int main_test()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt", "Adresaci3.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt", "Adresaci2.txt");
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAdresowa.logowanieUzytkownika();
@@ -26,7 +26,7 @@ int main_test()
 
 int main()
 {
-    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt", "Adresaci3.txt");
+    KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy2.txt", "Adresaci2.txt");
 
     char wybor;
 
@@ -79,7 +79,7 @@ int main()
                 //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;
             case '6':
-                //edytujAdresata(adresaci);
+                ksiazkaAdresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();

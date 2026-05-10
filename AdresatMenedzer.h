@@ -42,6 +42,7 @@ public:
     void oproznijVector();
     int usunAdresata();
     int podajIdWybranegoAdresata();
+    void edytujAdresata();
 
 };
 
