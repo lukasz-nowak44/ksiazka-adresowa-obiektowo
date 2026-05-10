@@ -40,6 +40,8 @@ public:
     int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void wyswietlWszystkichAdresatow();
     void oproznijVector();
+    int usunAdresata();
+    int podajIdWybranegoAdresata();
 
 };
 

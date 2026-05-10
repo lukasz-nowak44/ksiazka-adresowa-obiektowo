@@ -73,6 +73,8 @@ int main()
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '5':
+                ksiazkaAdresowa.usunAdresata();
+
                 //idUsunietegoAdresata = usunAdresata(adresaci);
                 //idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;
