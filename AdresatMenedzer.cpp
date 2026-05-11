@@ -5,12 +5,6 @@ int AdresatMenedzer::pobierzIdZalogowanegoUzytkownika()
     return ID_ZALOGOWANEGO_UZYTKOWNIKA;
 }
 
-/*void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
-{
-    if(noweIdZalogowanegoUzytkownika >= 0)
-        ID_ZALOGOWANEGO_UZYTKOWNIKA = noweIdZalogowanegoUzytkownika;
-}*/
-
 int AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
 {
     adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
@@ -99,7 +93,7 @@ void AdresatMenedzer::oproznijVector()
     adresaci.clear();
 }
 
-int AdresatMenedzer::usunAdresata()
+void AdresatMenedzer::usunAdresata()
 {
 
     int idUsuwanegoAdresata = 0;
@@ -112,9 +106,9 @@ int AdresatMenedzer::usunAdresata()
     char znak;
     bool czyIstniejeAdresat = false;
 
-    for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+    for (size_t i=0; i<adresaci.size(); i++)
     {
-        if (itr -> pobierzId() == idUsuwanegoAdresata)
+        if (adresaci[i].pobierzId() == idUsuwanegoAdresata)
         {
             czyIstniejeAdresat = true;
             cout << endl << "Potwierdz naciskajac klawisz 't': ";
@@ -122,17 +116,17 @@ int AdresatMenedzer::usunAdresata()
             if (znak == 't')
             {
                 plikZAdresatami.usunWybranegoAdresataZPliku(idUsuwanegoAdresata);
-                adresaci.erase(itr);
+                adresaci.erase(adresaci.begin()+i);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
                 plikZAdresatami.ustawIdOstatniegoAdresata();
-                return idUsuwanegoAdresata;
+
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("pause");
-                return 0;
+
             }
         }
     }
@@ -195,12 +189,12 @@ void AdresatMenedzer::edytujAdresata()
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
-                 adresaci[i].ustawEmail (MetodyPomocnicze::wczytajLinie());
+                adresaci[i].ustawEmail (MetodyPomocnicze::wczytajLinie());
                 plikZAdresatami.zaktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
-                 adresaci[i].ustawAdres (MetodyPomocnicze::wczytajLinie());
+                adresaci[i].ustawAdres (MetodyPomocnicze::wczytajLinie());
                 plikZAdresatami.zaktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                 break;
             case '6':

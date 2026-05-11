@@ -41,7 +41,7 @@ public:
     int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
     void wyswietlWszystkichAdresatow();
     void oproznijVector();
-    int usunAdresata();
+    void usunAdresata();
     int podajIdWybranegoAdresata();
     void edytujAdresata();
     void wyszukajAdresatowPoImieniu();

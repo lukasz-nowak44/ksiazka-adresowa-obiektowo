@@ -1,5 +1,5 @@
 1|joanna|324|
-2|beata|444|
+2|beata|333|
 3|anna|333|
 4|hanna|666|
 5|lukasz|degustator|
@@ -7,3 +7,4 @@
 7|jacek|wawrzyniak|
 8|patryk|wal|
 9|miki|111|
+10|roki|feta|
