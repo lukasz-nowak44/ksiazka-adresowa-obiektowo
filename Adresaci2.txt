@@ -1,7 +1,0 @@
-1|2|Robert|Cyga|25|fasf|eaef|
-2|4|Nicole|32q|sdfas|nicole@tlen.pl|sf|
-3|1|Krychu|fdsa|2134|asfd|os. kwiatowe 4, poznan|
-5|1|Mariusz|Mikler|saf|sadf|sadf|
-7|2|Robert|Lewandowski|afwaf|wafewafe|barcelona|
-8|10|Mikolaj|Malyszka|awdawda|awdawd|awdawdaw|
-9|1|Kama|Awdawda|wadawd|wadawda|awdawd|
